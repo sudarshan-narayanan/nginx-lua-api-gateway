@@ -38,6 +38,7 @@ This repository contains a fully functional, lightweight API Gateway implementat
 ├── Dockerfile                      # Container build
 ├── docker-compose.yml             # Redis + Gateway orchestration
 
+---
 
 ## 🚀 Getting Started
 ### Prerequisites
@@ -46,8 +47,10 @@ This repository contains a fully functional, lightweight API Gateway implementat
 
 ### Run the API Gateway
 ```
-docker-compose up --build
+  docker-compose up --build
 ```
+
+---
 
 ### Available Services
 | Component	| URL |
@@ -57,13 +60,17 @@ docker-compose up --build
 | Prometheus Metrics |	http://localhost:8080/metrics |
 | Redis	| localhost:6379 |
 
+---
+
 ## 🧪 Sample Test
 ```
-curl -X POST http://localhost:8080/api/users \
-  -H "Authorization: Bearer <your_token>" \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Alice", "email": "alice@example.com"}'
+  curl -X POST http://localhost:8080/api/users \
+    -H "Authorization: Bearer <your_token>" \
+    -H "Content-Type: application/json" \
+    -d '{"name": "Alice", "email": "alice@example.com"}'
 ```
+
+---
 
 ## 📊 Prometheus Metrics
 nginx_http_requests_total
@@ -72,6 +79,8 @@ nginx_http_request_duration_seconds
 
 Use these metrics in Prometheus or Grafana for observability.
 
+---
+
 ## 🧠 Notes
 Requires a valid JWT token signed with the secret "your-secret" for authentication.
 
@@ -79,13 +88,17 @@ The rate limiter allows 100 requests per IP per minute (via Redis).
 
 OpenAPI validation is a mock implementation; for full support, integrate with Lua FFI and a proper OpenAPI engine.
 
+---
+
 ## 🛡️ Security
 HTTPS is not enabled by default — use a reverse proxy or add certs in nginx.conf.
 
 Modify auth.lua for real-world token verification (e.g., with RSA or public JWK).
 
+---
+
 ## ✨ Author
 Built by Sudarshan Narayanan — feel free to fork and adapt.
 
 ## 🙌 Contributions Welcome!
-PRs, bug reports, and feature requests are welcome to improve this gateway further!
+PRs, bug reports, and feature requests are welcome to improve this gateway further.
