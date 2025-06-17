@@ -19,23 +19,23 @@ This repository contains a fully functional, lightweight API Gateway implementat
 ---
 
 ## 🗂️ Project Structure
-
-├── conf
-│   └── lua
-│       ├── auth.lua                 # JWT token validation
-│       ├── rate_limit_redis.lua    # Redis-based rate limiting
-│       ├── request_transform.lua   # Adds audit info to request body
-│       ├── openapi_validator.lua   # Simple OpenAPI request checks
-│       ├── prometheus.lua          # Request counting + latency metrics
-│       ├── cors.lua                # CORS preflight and headers
-│       └── logger.lua              # Logs request metadata
-├── swagger
-│   ├── index.html                  # Swagger UI
-│   └── openapi.json                # API specification
-├── nginx.conf                      # Main NGINX config
-├── Dockerfile                      # Container build
-├── docker-compose.yml             # Redis + Gateway orchestration
-
+```
+  ├── conf
+  │   └── lua
+  │       ├── auth.lua                 # JWT token validation
+  │       ├── rate_limit_redis.lua    # Redis-based rate limiting
+  │       ├── request_transform.lua   # Adds audit info to request body
+  │       ├── openapi_validator.lua   # Simple OpenAPI request checks
+  │       ├── prometheus.lua          # Request counting + latency metrics
+  │       ├── cors.lua                # CORS preflight and headers
+  │       └── logger.lua              # Logs request metadata
+  ├── swagger
+  │   ├── index.html                  # Swagger UI
+  │   └── openapi.json                # API specification
+  ├── nginx.conf                      # Main NGINX config
+  ├── Dockerfile                      # Container build
+  ├── docker-compose.yml             # Redis + Gateway orchestration
+```
 ---
 
 ## 🚀 Getting Started
