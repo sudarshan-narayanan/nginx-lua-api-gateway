@@ -20,8 +20,6 @@ This repository contains a fully functional, lightweight API Gateway implementat
 
 ## 🗂️ Project Structure
 
-```bash
-.
 ├── conf
 │   └── lua
 │       ├── auth.lua                 # JWT token validation
